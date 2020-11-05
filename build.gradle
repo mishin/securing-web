@@ -22,10 +22,15 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.security:spring-security-test'
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-	}
+	implementation 'io.rest-assured:rest-assured:4.1.1'
+	implementation 'io.rest-assured:json-path:4.0.0'
+	implementation 'io.rest-assured:xml-path:4.0.0'
+	implementation('org.json:json:20180813')
+	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+	testImplementation("org.junit.jupiter:junit-jupiter-api")
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+	testImplementation("org.springframework.security:spring-security-test")
 }
 
 test {
